@@ -1,4 +1,4 @@
-package io.cloudtype.Demo;
+package com.babtective.bap;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

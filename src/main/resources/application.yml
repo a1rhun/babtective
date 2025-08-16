@@ -1,7 +1,24 @@
 server:
   port: 8080
+  servlet:
+    context-path: /api
 
 spring:
+  datasource:
+    # 클라우드타입 DB에 연결합니다.
+    # 로컬에서 접속할 경우 외부 연결 정보를 사용합니다.
+    # URL 형식: jdbc:mariadb://[외부 연결 호스트]:[외부 연결 포트]/[DB 이름]?옵션
+    url: jdbc:mariadb://svc.sel5.cloudtype.app:32098/mariadb?useSSL=false&verifyServerCertificate=false
+    username: root
+    password: "020723"
+    driver-class-name: org.mariadb.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MariaDBDialect
+    show-sql: true
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher

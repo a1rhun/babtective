@@ -14,11 +14,20 @@ repositories {
 }
 
 dependencies {
+	// 기존 의존성
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+
+	// DB 관련 의존성 추가
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa' // JPA
+	implementation 'org.mariadb.jdbc:mariadb-java-client' // MariaDB Driver
+
+	// Lombok (선택적)
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
 tasks.named('test') {
 	useJUnitPlatform()
 }
-

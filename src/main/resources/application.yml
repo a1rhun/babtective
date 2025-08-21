@@ -1,17 +1,15 @@
 server:
   port: 8080
   servlet:
-    context-path: /api
+    context-path:
 
 spring:
   datasource:
-    # 클라우드타입 DB에 연결합니다.
-    # 로컬에서 접속할 경우 외부 연결 정보를 사용합니다.
-    # URL 형식: jdbc:mariadb://[외부 연결 호스트]:[외부 연결 포트]/[DB 이름]?옵션
     url: jdbc:mariadb://svc.sel5.cloudtype.app:32098/mariadb?useSSL=false&verifyServerCertificate=false
     username: root
     password: "020723"
     driver-class-name: org.mariadb.jdbc.Driver
+
   jpa:
     hibernate:
       ddl-auto: update
@@ -19,6 +17,12 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.MariaDBDialect
     show-sql: true
+
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
+
+# JWT 비밀 키를 설정합니다.
+# 반드시 256비트(32자) 이상의 길이를 가져야 합니다.
+jwt:
+  secret: 94175e92538f40ada5a7467221567425abcde12345678901234567890abcde

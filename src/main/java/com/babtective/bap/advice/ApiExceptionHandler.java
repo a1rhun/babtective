@@ -8,7 +8,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
-//예외사항 처리
+//*예외사항 처리
 @RestControllerAdvice
 public class ApiExceptionHandler {
 

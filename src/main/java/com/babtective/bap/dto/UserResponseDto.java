@@ -21,7 +21,7 @@ public class UserResponseDto {
     public String getName() { return name; }
     public String getEmail() { return email; }
 
-    // 엔티티 -> DTO 변환
+    // *엔티티 -> DTO 변환
     public static UserResponseDto from(User u) {
         return new UserResponseDto(u.getId(), u.getName(), u.getEmail());
     }

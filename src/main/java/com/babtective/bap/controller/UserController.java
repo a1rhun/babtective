@@ -25,6 +25,6 @@ public class UserController {
     public List<UserResponseDto> getAllUsers() {
         return userService.findAll().stream()
                 .map(UserResponseDto::from)
-                .collect(Collectors.toList());
+                .collect(Collectors.toList());//
     }
 }

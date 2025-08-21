@@ -19,7 +19,7 @@ public class UserService {
     private final UserRepository userRepository;
     private final BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 
-    /** 회원가입 **/
+    /** 회원가입 */
     @Transactional
     public UserResponseDto signup(UserSignupRequestDto req) {
         // 이메일 중복 체크

@@ -19,7 +19,7 @@ public class User {
 
     @JsonIgnore
     @Column(nullable = false)
-    private String passwordHash;  // 실제 저장되는 비밀번호 해시값
+    private String passwordHash;  //* 실제 저장되는 비밀번호 해시값
 
     @Column(nullable = false, length = 100)
     private String name;

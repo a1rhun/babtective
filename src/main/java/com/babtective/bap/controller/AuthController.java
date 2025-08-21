@@ -8,7 +8,7 @@ import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger; import org.slf4j.LoggerFactory;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
-//로그인 회원가입 controller
+//로그인 회원가입 controller*
 @RestController
 @RequestMapping("/auth")
 @RequiredArgsConstructor

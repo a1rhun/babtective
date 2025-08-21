@@ -4,7 +4,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-// 회원가입 요청 DTO (클라이언트 → 서버)
+// *회원가입 요청 DTO (클라이언트 → 서버)
 // 비밀번호는 평문으로 들어오며, 서비스에서 BCrypt로 해시해 저장
 @Getter @Setter
 @NoArgsConstructor
